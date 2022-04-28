@@ -19,8 +19,8 @@
 		E56ADBBC2817220C008DD37B /* BabbelCodingChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56ADBBB2817220C008DD37B /* BabbelCodingChallengeUITestsLaunchTests.swift */; };
 		E56D3C5E281A563C0023B467 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56D3C5D281A563C0023B467 /* FileReader.swift */; };
 		E56D3C60281A56480023B467 /* WordsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56D3C5F281A56480023B467 /* WordsRepository.swift */; };
-		E56D3C66281A57520023B467 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = E56D3C65281A57520023B467 /* words.json */; };
 		E56D3C68281A579B0023B467 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56D3C67281A579B0023B467 /* Word.swift */; };
+		E56D3C6A281A7E9E0023B467 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = E56D3C69281A7E9E0023B467 /* words.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,8 @@
 		E56ADBBB2817220C008DD37B /* BabbelCodingChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabbelCodingChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E56D3C5D281A563C0023B467 /* FileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 		E56D3C5F281A56480023B467 /* WordsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsRepository.swift; sourceTree = "<group>"; };
-		E56D3C65281A57520023B467 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = words.json; path = ../../words.json; sourceTree = "<group>"; };
 		E56D3C67281A579B0023B467 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		E56D3C69281A7E9E0023B467 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +131,8 @@
 				E55C80F62817CA6D00082BC9 /* Presentation */,
 				E56ADB982817220C008DD37B /* AppDelegate.swift */,
 				E56ADB9A2817220C008DD37B /* SceneDelegate.swift */,
-				E56D3C65281A57520023B467 /* words.json */,
 				E56ADBA12817220C008DD37B /* Assets.xcassets */,
+				E56D3C69281A7E9E0023B467 /* words.json */,
 				E56ADBA32817220C008DD37B /* LaunchScreen.storyboard */,
 				E56ADBA62817220C008DD37B /* Info.plist */,
 			);
@@ -271,9 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E56ADBA52817220C008DD37B /* LaunchScreen.storyboard in Resources */,
+				E56D3C6A281A7E9E0023B467 /* words.json in Resources */,
 				E55C80FB2817CAF300082BC9 /* WordGameViewController.storyboard in Resources */,
 				E56ADBA22817220C008DD37B /* Assets.xcassets in Resources */,
-				E56D3C66281A57520023B467 /* words.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
