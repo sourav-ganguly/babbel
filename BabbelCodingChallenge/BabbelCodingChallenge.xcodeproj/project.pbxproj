@@ -1,0 +1,665 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E55C80F92817CAA300082BC9 /* WordGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55C80F82817CAA300082BC9 /* WordGameViewController.swift */; };
+		E55C80FB2817CAF300082BC9 /* WordGameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E55C80FA2817CAF300082BC9 /* WordGameViewController.storyboard */; };
+		E55C80FD28187A6F00082BC9 /* WordGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55C80FC28187A6F00082BC9 /* WordGameViewModel.swift */; };
+		E56ADB992817220C008DD37B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56ADB982817220C008DD37B /* AppDelegate.swift */; };
+		E56ADB9B2817220C008DD37B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56ADB9A2817220C008DD37B /* SceneDelegate.swift */; };
+		E56ADBA22817220C008DD37B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56ADBA12817220C008DD37B /* Assets.xcassets */; };
+		E56ADBA52817220C008DD37B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56ADBA32817220C008DD37B /* LaunchScreen.storyboard */; };
+		E56ADBB02817220C008DD37B /* BabbelCodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56ADBAF2817220C008DD37B /* BabbelCodingChallengeTests.swift */; };
+		E56ADBBA2817220C008DD37B /* BabbelCodingChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56ADBB92817220C008DD37B /* BabbelCodingChallengeUITests.swift */; };
+		E56ADBBC2817220C008DD37B /* BabbelCodingChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56ADBBB2817220C008DD37B /* BabbelCodingChallengeUITestsLaunchTests.swift */; };
+		E56D3C5E281A563C0023B467 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56D3C5D281A563C0023B467 /* FileReader.swift */; };
+		E56D3C60281A56480023B467 /* WordsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56D3C5F281A56480023B467 /* WordsRepository.swift */; };
+		E56D3C66281A57520023B467 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = E56D3C65281A57520023B467 /* words.json */; };
+		E56D3C68281A579B0023B467 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56D3C67281A579B0023B467 /* Word.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E56ADBAC2817220C008DD37B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E56ADB8D2817220C008DD37B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E56ADB942817220C008DD37B;
+			remoteInfo = BabbelCodingChallenge;
+		};
+		E56ADBB62817220C008DD37B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E56ADB8D2817220C008DD37B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E56ADB942817220C008DD37B;
+			remoteInfo = BabbelCodingChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E55C80F82817CAA300082BC9 /* WordGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameViewController.swift; sourceTree = "<group>"; };
+		E55C80FA2817CAF300082BC9 /* WordGameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WordGameViewController.storyboard; sourceTree = "<group>"; };
+		E55C80FC28187A6F00082BC9 /* WordGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameViewModel.swift; sourceTree = "<group>"; };
+		E56ADB952817220C008DD37B /* BabbelCodingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabbelCodingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E56ADB982817220C008DD37B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E56ADB9A2817220C008DD37B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E56ADBA12817220C008DD37B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E56ADBA42817220C008DD37B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E56ADBA62817220C008DD37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E56ADBAB2817220C008DD37B /* BabbelCodingChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabbelCodingChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E56ADBAF2817220C008DD37B /* BabbelCodingChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabbelCodingChallengeTests.swift; sourceTree = "<group>"; };
+		E56ADBB52817220C008DD37B /* BabbelCodingChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabbelCodingChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E56ADBB92817220C008DD37B /* BabbelCodingChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabbelCodingChallengeUITests.swift; sourceTree = "<group>"; };
+		E56ADBBB2817220C008DD37B /* BabbelCodingChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabbelCodingChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E56D3C5D281A563C0023B467 /* FileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		E56D3C5F281A56480023B467 /* WordsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsRepository.swift; sourceTree = "<group>"; };
+		E56D3C65281A57520023B467 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = words.json; path = ../../words.json; sourceTree = "<group>"; };
+		E56D3C67281A579B0023B467 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E56ADB922817220C008DD37B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E56ADBA82817220C008DD37B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E56ADBB22817220C008DD37B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E55C80F62817CA6D00082BC9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E55C80F72817CA7800082BC9 /* WordGame */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E55C80F72817CA7800082BC9 /* WordGame */ = {
+			isa = PBXGroup;
+			children = (
+				E55C80F82817CAA300082BC9 /* WordGameViewController.swift */,
+				E55C80FA2817CAF300082BC9 /* WordGameViewController.storyboard */,
+				E55C80FC28187A6F00082BC9 /* WordGameViewModel.swift */,
+			);
+			path = WordGame;
+			sourceTree = "<group>";
+		};
+		E56ADB8C2817220C008DD37B = {
+			isa = PBXGroup;
+			children = (
+				E56ADB972817220C008DD37B /* BabbelCodingChallenge */,
+				E56ADBAE2817220C008DD37B /* BabbelCodingChallengeTests */,
+				E56ADBB82817220C008DD37B /* BabbelCodingChallengeUITests */,
+				E56ADB962817220C008DD37B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E56ADB962817220C008DD37B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E56ADB952817220C008DD37B /* BabbelCodingChallenge.app */,
+				E56ADBAB2817220C008DD37B /* BabbelCodingChallengeTests.xctest */,
+				E56ADBB52817220C008DD37B /* BabbelCodingChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E56ADB972817220C008DD37B /* BabbelCodingChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				E56D3C5C281A562F0023B467 /* Data */,
+				E55C80F62817CA6D00082BC9 /* Presentation */,
+				E56ADB982817220C008DD37B /* AppDelegate.swift */,
+				E56ADB9A2817220C008DD37B /* SceneDelegate.swift */,
+				E56D3C65281A57520023B467 /* words.json */,
+				E56ADBA12817220C008DD37B /* Assets.xcassets */,
+				E56ADBA32817220C008DD37B /* LaunchScreen.storyboard */,
+				E56ADBA62817220C008DD37B /* Info.plist */,
+			);
+			path = BabbelCodingChallenge;
+			sourceTree = "<group>";
+		};
+		E56ADBAE2817220C008DD37B /* BabbelCodingChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				E56ADBAF2817220C008DD37B /* BabbelCodingChallengeTests.swift */,
+			);
+			path = BabbelCodingChallengeTests;
+			sourceTree = "<group>";
+		};
+		E56ADBB82817220C008DD37B /* BabbelCodingChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E56ADBB92817220C008DD37B /* BabbelCodingChallengeUITests.swift */,
+				E56ADBBB2817220C008DD37B /* BabbelCodingChallengeUITestsLaunchTests.swift */,
+			);
+			path = BabbelCodingChallengeUITests;
+			sourceTree = "<group>";
+		};
+		E56D3C5C281A562F0023B467 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E56D3C5F281A56480023B467 /* WordsRepository.swift */,
+				E56D3C5D281A563C0023B467 /* FileReader.swift */,
+				E56D3C67281A579B0023B467 /* Word.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E56ADB942817220C008DD37B /* BabbelCodingChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E56ADBBF2817220C008DD37B /* Build configuration list for PBXNativeTarget "BabbelCodingChallenge" */;
+			buildPhases = (
+				E56ADB912817220C008DD37B /* Sources */,
+				E56ADB922817220C008DD37B /* Frameworks */,
+				E56ADB932817220C008DD37B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BabbelCodingChallenge;
+			productName = BabbelCodingChallenge;
+			productReference = E56ADB952817220C008DD37B /* BabbelCodingChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E56ADBAA2817220C008DD37B /* BabbelCodingChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E56ADBC22817220C008DD37B /* Build configuration list for PBXNativeTarget "BabbelCodingChallengeTests" */;
+			buildPhases = (
+				E56ADBA72817220C008DD37B /* Sources */,
+				E56ADBA82817220C008DD37B /* Frameworks */,
+				E56ADBA92817220C008DD37B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E56ADBAD2817220C008DD37B /* PBXTargetDependency */,
+			);
+			name = BabbelCodingChallengeTests;
+			productName = BabbelCodingChallengeTests;
+			productReference = E56ADBAB2817220C008DD37B /* BabbelCodingChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E56ADBB42817220C008DD37B /* BabbelCodingChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E56ADBC52817220C008DD37B /* Build configuration list for PBXNativeTarget "BabbelCodingChallengeUITests" */;
+			buildPhases = (
+				E56ADBB12817220C008DD37B /* Sources */,
+				E56ADBB22817220C008DD37B /* Frameworks */,
+				E56ADBB32817220C008DD37B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E56ADBB72817220C008DD37B /* PBXTargetDependency */,
+			);
+			name = BabbelCodingChallengeUITests;
+			productName = BabbelCodingChallengeUITests;
+			productReference = E56ADBB52817220C008DD37B /* BabbelCodingChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E56ADB8D2817220C008DD37B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					E56ADB942817220C008DD37B = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					E56ADBAA2817220C008DD37B = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = E56ADB942817220C008DD37B;
+					};
+					E56ADBB42817220C008DD37B = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = E56ADB942817220C008DD37B;
+					};
+				};
+			};
+			buildConfigurationList = E56ADB902817220C008DD37B /* Build configuration list for PBXProject "BabbelCodingChallenge" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E56ADB8C2817220C008DD37B;
+			productRefGroup = E56ADB962817220C008DD37B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E56ADB942817220C008DD37B /* BabbelCodingChallenge */,
+				E56ADBAA2817220C008DD37B /* BabbelCodingChallengeTests */,
+				E56ADBB42817220C008DD37B /* BabbelCodingChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E56ADB932817220C008DD37B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E56ADBA52817220C008DD37B /* LaunchScreen.storyboard in Resources */,
+				E55C80FB2817CAF300082BC9 /* WordGameViewController.storyboard in Resources */,
+				E56ADBA22817220C008DD37B /* Assets.xcassets in Resources */,
+				E56D3C66281A57520023B467 /* words.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E56ADBA92817220C008DD37B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E56ADBB32817220C008DD37B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E56ADB912817220C008DD37B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E55C80F92817CAA300082BC9 /* WordGameViewController.swift in Sources */,
+				E55C80FD28187A6F00082BC9 /* WordGameViewModel.swift in Sources */,
+				E56D3C60281A56480023B467 /* WordsRepository.swift in Sources */,
+				E56D3C5E281A563C0023B467 /* FileReader.swift in Sources */,
+				E56D3C68281A579B0023B467 /* Word.swift in Sources */,
+				E56ADB992817220C008DD37B /* AppDelegate.swift in Sources */,
+				E56ADB9B2817220C008DD37B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E56ADBA72817220C008DD37B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E56ADBB02817220C008DD37B /* BabbelCodingChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E56ADBB12817220C008DD37B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E56ADBBC2817220C008DD37B /* BabbelCodingChallengeUITestsLaunchTests.swift in Sources */,
+				E56ADBBA2817220C008DD37B /* BabbelCodingChallengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E56ADBAD2817220C008DD37B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E56ADB942817220C008DD37B /* BabbelCodingChallenge */;
+			targetProxy = E56ADBAC2817220C008DD37B /* PBXContainerItemProxy */;
+		};
+		E56ADBB72817220C008DD37B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E56ADB942817220C008DD37B /* BabbelCodingChallenge */;
+			targetProxy = E56ADBB62817220C008DD37B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E56ADBA32817220C008DD37B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E56ADBA42817220C008DD37B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E56ADBBD2817220C008DD37B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E56ADBBE2817220C008DD37B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E56ADBC02817220C008DD37B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LL2KGA689L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BabbelCodingChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = WordGameViewController;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ganguly.BabbelCodingChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E56ADBC12817220C008DD37B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LL2KGA689L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BabbelCodingChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = WordGameViewController;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ganguly.BabbelCodingChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E56ADBC32817220C008DD37B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LL2KGA689L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ganguly.BabbelCodingChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BabbelCodingChallenge.app/BabbelCodingChallenge";
+			};
+			name = Debug;
+		};
+		E56ADBC42817220C008DD37B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LL2KGA689L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ganguly.BabbelCodingChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BabbelCodingChallenge.app/BabbelCodingChallenge";
+			};
+			name = Release;
+		};
+		E56ADBC62817220C008DD37B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LL2KGA689L;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ganguly.BabbelCodingChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BabbelCodingChallenge;
+			};
+			name = Debug;
+		};
+		E56ADBC72817220C008DD37B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LL2KGA689L;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ganguly.BabbelCodingChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BabbelCodingChallenge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E56ADB902817220C008DD37B /* Build configuration list for PBXProject "BabbelCodingChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E56ADBBD2817220C008DD37B /* Debug */,
+				E56ADBBE2817220C008DD37B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E56ADBBF2817220C008DD37B /* Build configuration list for PBXNativeTarget "BabbelCodingChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E56ADBC02817220C008DD37B /* Debug */,
+				E56ADBC12817220C008DD37B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E56ADBC22817220C008DD37B /* Build configuration list for PBXNativeTarget "BabbelCodingChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E56ADBC32817220C008DD37B /* Debug */,
+				E56ADBC42817220C008DD37B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E56ADBC52817220C008DD37B /* Build configuration list for PBXNativeTarget "BabbelCodingChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E56ADBC62817220C008DD37B /* Debug */,
+				E56ADBC72817220C008DD37B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E56ADB8D2817220C008DD37B /* Project object */;
+}

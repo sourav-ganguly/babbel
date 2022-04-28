@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Word Game View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="WordGameViewController" customModule="BabbelCodingChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rce-Qg-fBD">
+                                <rect key="frame" x="135.5" y="311.5" width="143" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebV-IC-vR3">
+                                <rect key="frame" x="0.0" y="689" width="207" height="207"/>
+                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ebV-IC-vR3" secondAttribute="height" id="Mh2-wG-IDZ"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="NO"/>
+                                <connections>
+                                    <action selector="didTapOnNegetiveButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Gib-Ub-ws4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aaf-5a-ap5">
+                                <rect key="frame" x="207" y="689" width="207" height="207"/>
+                                <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Aaf-5a-ap5" secondAttribute="height" id="2uj-G5-s2Z"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="YES"/>
+                                <connections>
+                                    <action selector="didTapOnPositiveButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4TC-RQ-Mhb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnY-hf-FLZ">
+                                <rect key="frame" x="175" y="660" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3a-1p-5UU">
+                                <rect key="frame" x="125.5" y="80" width="163" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select YES if the floating translation is correct, otherwise select NO." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5c-Oc-2i8">
+                                <rect key="frame" x="16" y="431.5" width="382" height="93.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Aaf-5a-ap5" secondAttribute="trailing" id="0ps-Hy-g2f"/>
+                            <constraint firstAttribute="bottom" secondItem="ebV-IC-vR3" secondAttribute="bottom" id="2Hd-GN-cIP"/>
+                            <constraint firstItem="H3a-1p-5UU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="36" id="7JF-gk-bzC"/>
+                            <constraint firstItem="ebV-IC-vR3" firstAttribute="top" secondItem="dnY-hf-FLZ" secondAttribute="bottom" constant="8" id="8EU-XE-Tai"/>
+                            <constraint firstItem="Aaf-5a-ap5" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.5" id="Cuo-5d-ko9"/>
+                            <constraint firstItem="C5c-Oc-2i8" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="30" id="Eo6-2w-05o"/>
+                            <constraint firstAttribute="bottom" secondItem="Aaf-5a-ap5" secondAttribute="bottom" id="HPL-Fo-th4"/>
+                            <constraint firstItem="dnY-hf-FLZ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HTO-mG-YxN"/>
+                            <constraint firstItem="C5c-Oc-2i8" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Mu4-4F-fjY"/>
+                            <constraint firstItem="Rce-Qg-fBD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ROH-AD-rHd"/>
+                            <constraint firstItem="ebV-IC-vR3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TQA-BX-Uj1"/>
+                            <constraint firstItem="Rce-Qg-fBD" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-120" id="W54-ho-TgY"/>
+                            <constraint firstItem="ebV-IC-vR3" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.5" id="dt6-te-eHL"/>
+                            <constraint firstAttribute="trailing" secondItem="C5c-Oc-2i8" secondAttribute="trailing" constant="16" id="hfl-ca-iCc"/>
+                            <constraint firstItem="H3a-1p-5UU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ue1-3p-cxp"/>
+                            <constraint firstItem="C5c-Oc-2i8" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="16" id="x38-Fr-g1N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="englishWord" destination="Rce-Qg-fBD" id="Kz2-tF-ETB"/>
+                        <outlet property="instructionLabel" destination="C5c-Oc-2i8" id="OYa-3R-Gue"/>
+                        <outlet property="negetiveButton" destination="ebV-IC-vR3" id="kkT-Qa-gzX"/>
+                        <outlet property="positiveButton" destination="Aaf-5a-ap5" id="saS-nV-wmU"/>
+                        <outlet property="scoreLabel" destination="dnY-hf-FLZ" id="0mn-YZ-khq"/>
+                        <outlet property="spanishWord" destination="H3a-1p-5UU" id="Ggi-jN-tY1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="80"/>
+        </scene>
+    </scenes>
+</document>
