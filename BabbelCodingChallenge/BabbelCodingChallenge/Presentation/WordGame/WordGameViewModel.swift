@@ -19,7 +19,7 @@ protocol WordGameViewModelType {
 }
 
 class WordGameViewModel: WordGameViewModelType {
-    let wordsRepository: WordsRepository = WordsRepositoryImpl()
+    let wordsRepository: WordsRepository
     
     @Published var score: Int = 0
     var scorePublisher: Published<Int>.Publisher { $score }
@@ -42,7 +42,9 @@ class WordGameViewModel: WordGameViewModelType {
         words.count
     }
     
-    init() {
+    init(wordsRepository: WordsRepository) {
+        self.wordsRepository = wordsRepository
+        
         wordsRepository.getWords { [weak self] result in
             switch result {
             case .success(let words):
@@ -97,15 +99,15 @@ class WordGameViewModel: WordGameViewModelType {
 }
 
 // MARK: Constants
-private extension Double {
+fileprivate extension Double {
     static let timerDuration = 6.0
 }
 
-private extension Int {
+fileprivate extension Int {
     static let gameLength = 20
 }
 
-private extension String {
+fileprivate extension String {
     static let initialBannerText = "Select YES if the floating translation is correct, otherwise select NO. +1 for correct answer, -1 for wrong answer. After 20 chances, GAME is OVER"
     static let finalBannerText = "Game Over!"
 }

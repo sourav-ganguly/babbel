@@ -26,7 +26,6 @@ class WordGameViewController: UIViewController {
         negetiveButton.layer.cornerRadius = 0
         positiveButton.layer.cornerRadius = 0
         
-        viewModel = WordGameViewModel()
         subscribeToViewModel()
     }
     
@@ -85,7 +84,7 @@ class WordGameViewController: UIViewController {
 }
 
 // MARK: Constants
-private extension Double {
+fileprivate extension Double {
     static let animationDuration = 5.0
     static let screenHeight = 1000.0
 }
