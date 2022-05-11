@@ -105,7 +105,7 @@ class WordGameTests: XCTestCase {
         XCTAssertEqual(sut.score, previousScore - 1)
     }
     
-    func testWordGame_whenSelectMoveLessThanGameMove_gameOverStatusFalse() {
+    func testWordGame_whenSelectMoveLessThanGameLength_gameOverStatusFalse() {
         sut.words = [
             Word(english: "a", spanish: "a"),
             Word(english: "b", spanish: "b")
@@ -118,7 +118,7 @@ class WordGameTests: XCTestCase {
         XCTAssertFalse(sut.isGameOver)
     }
     
-    func testWordGame_whenSelectMoveEqualToGameMove_gameOverStatusTrue() {
+    func testWordGame_whenSelectMoveEqualToGameGameLength_gameOverStatusTrue() {
         sut.words = [
             Word(english: "a", spanish: "a"),
             Word(english: "b", spanish: "b")
