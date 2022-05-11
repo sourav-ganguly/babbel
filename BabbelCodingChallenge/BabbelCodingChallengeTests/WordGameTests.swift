@@ -44,19 +44,18 @@ class WordGameTests: XCTestCase {
     }
     
     func testWordGame_whenStarted_scoreIsZero() {
+        givenGameInitialized()
         XCTAssertEqual(sut.score, 0)
     }
     
-    func testWordGame_whenReset_scoreIsZero() {
+    func testWordGameInProgress_whenReset_scoreIsZero() {
         givenGameInitialized()
-        sut.nextMove()
-        let answer = sut.currentEnglishWord == sut.currentSpanishWord
-        sut.selectTranslation(status: answer)
+        givenGameInProgress()
         sut.reset()
         XCTAssertEqual(sut.score, 0)
     }
     
-    func testWordGame_whenSelectCurrectFirstTime_scoreIsOne() {
+    func testWordGameInitialized_whenSelectCurrect_scoreIsOne() {
         givenGameInitialized()
         sut.nextMove()
         let answer = sut.currentEnglishWord == sut.currentSpanishWord
@@ -64,7 +63,7 @@ class WordGameTests: XCTestCase {
         XCTAssertEqual(sut.score, 1)
     }
     
-    func testWordGame_whenSelectCurrectFiveTimesInStart_scoreIsFive() {
+    func testWordGameInitialized_whenSelectCurrectFiveTimes_scoreIsFive() {
         givenGameInitialized()
         
         for _ in 0..<5 {
@@ -75,7 +74,7 @@ class WordGameTests: XCTestCase {
         XCTAssertEqual(sut.score, 5)
     }
     
-    func testWordGame_whenSelectIncurrectFirstTime_scoreIsZero() {
+    func testWordGameInitialized_whenSelectIncurrect_scoreIsZero() {
         givenGameInitialized()
         sut.nextMove()
         let answer = sut.currentEnglishWord == sut.currentSpanishWord
@@ -83,7 +82,7 @@ class WordGameTests: XCTestCase {
         XCTAssertEqual(sut.score, 0)
     }
     
-    func testWordGame_whenSelectCurrectInProgress_scoreIncreaseByOne() {
+    func testWordGameInProgress_whenSelectCurrect_scoreIncreaseByOne() {
         givenGameInitialized()
         givenGameInProgress()
         let previousScore = sut.score
@@ -94,7 +93,7 @@ class WordGameTests: XCTestCase {
         XCTAssertEqual(sut.score, previousScore + 1)
     }
     
-    func testWordGame_whenSelectIncurrectInProgress_scoreDecreaseByOne() {
+    func testWordGameInProgress_whenSelectIncurrect_scoreDecreaseByOne() {
         givenGameInitialized()
         givenGameInProgress()
         let previousScore = sut.score
@@ -105,7 +104,7 @@ class WordGameTests: XCTestCase {
         XCTAssertEqual(sut.score, previousScore - 1)
     }
     
-    func testWordGame_whenSelectMoveLessThanGameLength_gameOverStatusFalse() {
+    func testWordGameInitialized_whenSelectMoveLessThanGameLength_gameOverStatusFalse() {
         sut.words = [
             Word(english: "a", spanish: "a"),
             Word(english: "b", spanish: "b")
@@ -118,7 +117,7 @@ class WordGameTests: XCTestCase {
         XCTAssertFalse(sut.isGameOver)
     }
     
-    func testWordGame_whenSelectMoveEqualToGameLength_gameOverStatusFalse() {
+    func testWordGameInitialized_whenSelectMoveEqualToGameLength_gameOverStatusFalse() {
         sut.words = [
             Word(english: "a", spanish: "a"),
             Word(english: "b", spanish: "b")
@@ -133,7 +132,7 @@ class WordGameTests: XCTestCase {
         XCTAssertFalse(sut.isGameOver)
     }
     
-    func testWordGame_whenSelectMoveGreatThanGameLength_gameOverStatusTrue() {
+    func testWordGameInitialized_whenSelectMoveGreatThanGameLength_gameOverStatusTrue() {
         sut.words = [
             Word(english: "a", spanish: "a"),
             Word(english: "b", spanish: "b")
@@ -149,7 +148,17 @@ class WordGameTests: XCTestCase {
         XCTAssertTrue(sut.isGameOver)
     }
     
-    func testWordGame_whenStarted_gameOverStatusTrue() {
+    func testWordGameInProgress_whenSelectNothing_scoreStaysSame() {
+        givenGameInitialized()
+        givenGameInProgress()
+        let previousScore = sut.score
+        
+        sut.nextMove()
+        sut.nextMove()
+        XCTAssertEqual(sut.score, previousScore)
+    }
+    
+    func testWordGameInitilized_whenStarted_gameOverStatusTrue() {
         givenGameInitialized()
 
         XCTAssertFalse(sut.isGameOver)
