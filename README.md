@@ -9,11 +9,13 @@ A word game. There will be one english word and one Spanish word floating around
 
 
 ## Time
-Around 8 hours spent in total for completing the task.
+Around 11 hours spent in total for completing the task.
 
 ## time distributed
 - For View: 3
 - For ViewModel: 3
+- For Model Logic: 1.5
+- For Testing: 1.5
 - For Data fetching: 1
 - For Documentation: 1
 
