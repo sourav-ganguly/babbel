@@ -6,27 +6,136 @@
 //
 
 import XCTest
+@testable import BabbelCodingChallenge
 
 class WordGameTests: XCTestCase {
+    var sut: WordGame!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        try super.setUpWithError()
+        sut = WordGame()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
+        try super.tearDownWithError()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func givenGameInitialized() {
+        sut.words = [
+            Word(english: "a", spanish: "a"),
+            Word(english: "b", spanish: "b")
+        ]
+        sut.gameLength = 10
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func givenGameInProgress() {
+        sut.nextMove()
+        let answer = sut.currentEnglishWord == sut.currentSpanishWord
+        sut.selectTranslation(status: answer)
+        
+        sut.nextMove()
+        let secondAnswer = sut.currentEnglishWord == sut.currentSpanishWord
+        sut.selectTranslation(status: secondAnswer)
+        
+        sut.nextMove()
+        let thirdAnswer = sut.currentEnglishWord == sut.currentSpanishWord
+        sut.selectTranslation(status: thirdAnswer)
+    }
+    
+    func testWordGame_whenStarted_scoreIsZero() {
+        XCTAssertEqual(sut.score, 0)
+    }
+    
+    func testWordGame_whenReset_scoreIsZero() {
+        givenGameInitialized()
+        sut.nextMove()
+        let answer = sut.currentEnglishWord == sut.currentSpanishWord
+        sut.selectTranslation(status: answer)
+        sut.reset()
+        XCTAssertEqual(sut.score, 0)
+    }
+    
+    func testWordGame_whenSelectCurrectFirstTime_scoreIsOne() {
+        givenGameInitialized()
+        sut.nextMove()
+        let answer = sut.currentEnglishWord == sut.currentSpanishWord
+        sut.selectTranslation(status: answer)
+        XCTAssertEqual(sut.score, 1)
+    }
+    
+    func testWordGame_whenSelectCurrectFiveTimesInStart_scoreIsFive() {
+        givenGameInitialized()
+        
+        for _ in 0..<5 {
+            sut.nextMove()
+            let answer = sut.currentEnglishWord == sut.currentSpanishWord
+            sut.selectTranslation(status: answer)
         }
+        XCTAssertEqual(sut.score, 5)
     }
+    
+    func testWordGame_whenSelectIncurrectFirstTime_scoreIsZero() {
+        givenGameInitialized()
+        sut.nextMove()
+        let answer = sut.currentEnglishWord == sut.currentSpanishWord
+        sut.selectTranslation(status: !answer)
+        XCTAssertEqual(sut.score, 0)
+    }
+    
+    func testWordGame_whenSelectCurrectInProgress_scoreIncreaseByOne() {
+        givenGameInitialized()
+        givenGameInProgress()
+        let previousScore = sut.score
+        
+        sut.nextMove()
+        let answer = sut.currentEnglishWord == sut.currentSpanishWord
+        sut.selectTranslation(status: answer)
+        XCTAssertEqual(sut.score, previousScore + 1)
+    }
+    
+    func testWordGame_whenSelectIncurrectInProgress_scoreDecreaseByOne() {
+        givenGameInitialized()
+        givenGameInProgress()
+        let previousScore = sut.score
+        
+        sut.nextMove()
+        let answer = sut.currentEnglishWord == sut.currentSpanishWord
+        sut.selectTranslation(status: !answer)
+        XCTAssertEqual(sut.score, previousScore - 1)
+    }
+    
+    func testWordGame_whenSelectMoveLessThanGameMove_gameOverStatusFalse() {
+        sut.words = [
+            Word(english: "a", spanish: "a"),
+            Word(english: "b", spanish: "b")
+        ]
+        sut.gameLength = 5
+        
+        sut.nextMove()
+        sut.nextMove()
+        sut.nextMove()
+        XCTAssertFalse(sut.isGameOver)
+    }
+    
+    func testWordGame_whenSelectMoveEqualToGameMove_gameOverStatusTrue() {
+        sut.words = [
+            Word(english: "a", spanish: "a"),
+            Word(english: "b", spanish: "b")
+        ]
+        sut.gameLength = 5
+        
+        sut.nextMove()
+        sut.nextMove()
+        sut.nextMove()
+        sut.nextMove()
+        sut.nextMove()
+        XCTAssertTrue(sut.isGameOver)
+    }
+    
+    func testWordGame_whenStarted_gameOverStatusTrue() {
+        givenGameInitialized()
 
+        XCTAssertFalse(sut.isGameOver)
+    }
 }
