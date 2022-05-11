@@ -20,6 +20,7 @@ protocol WordGameViewModelType {
 
 class WordGameViewModel: WordGameViewModelType {
     let wordsRepository: WordsRepository
+    var wordGame: WordGame
     
     @Published var score: Int = 0
     var scorePublisher: Published<Int>.Publisher { $score }
@@ -33,22 +34,19 @@ class WordGameViewModel: WordGameViewModelType {
     @Published var wordsCouple: (englishName: String, spanishName: String)  = ("", "")
     var wordsCouplePublisher: Published<(englishName: String, spanishName: String)>.Publisher { $wordsCouple }
     
-    private var alreadySelected = false
     private var gameTimer: Timer?
-    private var isCurrectTranslation: Bool?
-    
-    private var words: [Word] = []
-    private var nWords: Int {
-        words.count
-    }
     
     init(wordsRepository: WordsRepository) {
         self.wordsRepository = wordsRepository
+        self.wordGame = WordGame()
         
         wordsRepository.getWords { [weak self] result in
+            guard let self = self else { return }
+            
             switch result {
             case .success(let words):
-                self?.words = words
+                self.wordGame.words = words
+                self.wordGame.gameLength = .gameLength
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -58,43 +56,25 @@ class WordGameViewModel: WordGameViewModelType {
             guard let self = self else { return }
             
             self.bannerText = ""
+            self.wordGame.nextMove()
             
-            if self.shownWordsCount >= .gameLength {
+            if self.wordGame.isGameOver {
                 self.wordsCouple = ("", "")
                 self.bannerText = .finalBannerText
+                self.wordGame.reset()
                 timer.invalidate()
                 return
             }
             
-            self.shownWordsCount = self.shownWordsCount + 1
-            self.alreadySelected = false
-            
-            let randomNumber = Int.random(in: 0..<self.nWords)
-            self.isCurrectTranslation = Bool.random()
-            let englishWord = self.words[randomNumber].textEnglish
-            let spanishWord: String
-            if self.isCurrectTranslation == true {
-                spanishWord = self.words[randomNumber].textSpanish
-            } else if self.isCurrectTranslation == false {
-                spanishWord = randomNumber < self.nWords - 1 ? self.words[randomNumber + 1].textSpanish : self.words[randomNumber - 1].textSpanish
-            } else {
-                spanishWord = ""
-            }
-            self.wordsCouple = (englishWord, spanishWord)
+            self.shownWordsCount = self.wordGame.shownWordsCount
+            self.wordsCouple = (self.wordGame.currentEnglishWord, self.wordGame.currentSpanishWord)
+            print(self.wordsCouple)
         }
     }
     
     func selectTranslation(state: Bool) {
-        guard let selectedState = self.isCurrectTranslation, !alreadySelected
-        else {
-            return
-        }
-        if (selectedState == state) {
-            self.score = self.score + 1
-        } else if self.score > 0 {
-            self.score = self.score - 1
-        }
-        alreadySelected = true
+        wordGame.selectTranslation(status: state)
+        self.score = wordGame.score
     }
 }
 

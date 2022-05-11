@@ -10,6 +10,11 @@ import Foundation
 // MARK: - Word
 struct Word: Codable {
     let textEnglish, textSpanish: String
+    
+    init(english: String, spanish: String) {
+        textEnglish = english
+        textSpanish = spanish
+    }
 
     enum CodingKeys: String, CodingKey {
         case textEnglish = "text_eng"

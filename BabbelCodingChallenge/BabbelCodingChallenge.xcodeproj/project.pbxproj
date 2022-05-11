@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5371956282C003600F71E30 /* WordGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5371955282C003600F71E30 /* WordGame.swift */; };
+		E537195B282C14E100F71E30 /* WordGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E537195A282C14E100F71E30 /* WordGameTests.swift */; };
 		E55C80F92817CAA300082BC9 /* WordGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55C80F82817CAA300082BC9 /* WordGameViewController.swift */; };
 		E55C80FB2817CAF300082BC9 /* WordGameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E55C80FA2817CAF300082BC9 /* WordGameViewController.storyboard */; };
 		E55C80FD28187A6F00082BC9 /* WordGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55C80FC28187A6F00082BC9 /* WordGameViewModel.swift */; };
 		E56ADB992817220C008DD37B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56ADB982817220C008DD37B /* AppDelegate.swift */; };
 		E56ADBA22817220C008DD37B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E56ADBA12817220C008DD37B /* Assets.xcassets */; };
 		E56ADBA52817220C008DD37B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E56ADBA32817220C008DD37B /* LaunchScreen.storyboard */; };
-		E56ADBB02817220C008DD37B /* BabbelCodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56ADBAF2817220C008DD37B /* BabbelCodingChallengeTests.swift */; };
-		E56ADBBA2817220C008DD37B /* BabbelCodingChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56ADBB92817220C008DD37B /* BabbelCodingChallengeUITests.swift */; };
-		E56ADBBC2817220C008DD37B /* BabbelCodingChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56ADBBB2817220C008DD37B /* BabbelCodingChallengeUITestsLaunchTests.swift */; };
 		E56D3C5E281A563C0023B467 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56D3C5D281A563C0023B467 /* FileReader.swift */; };
 		E56D3C60281A56480023B467 /* WordsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56D3C5F281A56480023B467 /* WordsRepository.swift */; };
 		E56D3C68281A579B0023B467 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56D3C67281A579B0023B467 /* Word.swift */; };
@@ -30,16 +29,11 @@
 			remoteGlobalIDString = E56ADB942817220C008DD37B;
 			remoteInfo = BabbelCodingChallenge;
 		};
-		E56ADBB62817220C008DD37B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E56ADB8D2817220C008DD37B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E56ADB942817220C008DD37B;
-			remoteInfo = BabbelCodingChallenge;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E5371955282C003600F71E30 /* WordGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGame.swift; sourceTree = "<group>"; };
+		E537195A282C14E100F71E30 /* WordGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameTests.swift; sourceTree = "<group>"; };
 		E55C80F82817CAA300082BC9 /* WordGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameViewController.swift; sourceTree = "<group>"; };
 		E55C80FA2817CAF300082BC9 /* WordGameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WordGameViewController.storyboard; sourceTree = "<group>"; };
 		E55C80FC28187A6F00082BC9 /* WordGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameViewModel.swift; sourceTree = "<group>"; };
@@ -49,10 +43,6 @@
 		E56ADBA42817220C008DD37B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E56ADBA62817220C008DD37B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E56ADBAB2817220C008DD37B /* BabbelCodingChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabbelCodingChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E56ADBAF2817220C008DD37B /* BabbelCodingChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabbelCodingChallengeTests.swift; sourceTree = "<group>"; };
-		E56ADBB52817220C008DD37B /* BabbelCodingChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabbelCodingChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E56ADBB92817220C008DD37B /* BabbelCodingChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabbelCodingChallengeUITests.swift; sourceTree = "<group>"; };
-		E56ADBBB2817220C008DD37B /* BabbelCodingChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabbelCodingChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E56D3C5D281A563C0023B467 /* FileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 		E56D3C5F281A56480023B467 /* WordsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsRepository.swift; sourceTree = "<group>"; };
 		E56D3C67281A579B0023B467 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
@@ -68,13 +58,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E56ADBA82817220C008DD37B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E56ADBB22817220C008DD37B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -107,7 +90,6 @@
 			children = (
 				E56ADB972817220C008DD37B /* BabbelCodingChallenge */,
 				E56ADBAE2817220C008DD37B /* BabbelCodingChallengeTests */,
-				E56ADBB82817220C008DD37B /* BabbelCodingChallengeUITests */,
 				E56ADB962817220C008DD37B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,7 +99,6 @@
 			children = (
 				E56ADB952817220C008DD37B /* BabbelCodingChallenge.app */,
 				E56ADBAB2817220C008DD37B /* BabbelCodingChallengeTests.xctest */,
-				E56ADBB52817220C008DD37B /* BabbelCodingChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,18 +120,9 @@
 		E56ADBAE2817220C008DD37B /* BabbelCodingChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				E56ADBAF2817220C008DD37B /* BabbelCodingChallengeTests.swift */,
+				E537195A282C14E100F71E30 /* WordGameTests.swift */,
 			);
 			path = BabbelCodingChallengeTests;
-			sourceTree = "<group>";
-		};
-		E56ADBB82817220C008DD37B /* BabbelCodingChallengeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E56ADBB92817220C008DD37B /* BabbelCodingChallengeUITests.swift */,
-				E56ADBBB2817220C008DD37B /* BabbelCodingChallengeUITestsLaunchTests.swift */,
-			);
-			path = BabbelCodingChallengeUITests;
 			sourceTree = "<group>";
 		};
 		E56D3C5C281A562F0023B467 /* Data */ = {
@@ -159,6 +131,7 @@
 				E56D3C5F281A56480023B467 /* WordsRepository.swift */,
 				E56D3C5D281A563C0023B467 /* FileReader.swift */,
 				E56D3C67281A579B0023B467 /* Word.swift */,
+				E5371955282C003600F71E30 /* WordGame.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -201,24 +174,6 @@
 			productReference = E56ADBAB2817220C008DD37B /* BabbelCodingChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E56ADBB42817220C008DD37B /* BabbelCodingChallengeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E56ADBC52817220C008DD37B /* Build configuration list for PBXNativeTarget "BabbelCodingChallengeUITests" */;
-			buildPhases = (
-				E56ADBB12817220C008DD37B /* Sources */,
-				E56ADBB22817220C008DD37B /* Frameworks */,
-				E56ADBB32817220C008DD37B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E56ADBB72817220C008DD37B /* PBXTargetDependency */,
-			);
-			name = BabbelCodingChallengeUITests;
-			productName = BabbelCodingChallengeUITests;
-			productReference = E56ADBB52817220C008DD37B /* BabbelCodingChallengeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -233,10 +188,6 @@
 						CreatedOnToolsVersion = 13.1;
 					};
 					E56ADBAA2817220C008DD37B = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = E56ADB942817220C008DD37B;
-					};
-					E56ADBB42817220C008DD37B = {
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = E56ADB942817220C008DD37B;
 					};
@@ -257,7 +208,6 @@
 			targets = (
 				E56ADB942817220C008DD37B /* BabbelCodingChallenge */,
 				E56ADBAA2817220C008DD37B /* BabbelCodingChallengeTests */,
-				E56ADBB42817220C008DD37B /* BabbelCodingChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -281,13 +231,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E56ADBB32817220C008DD37B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -297,6 +240,7 @@
 			files = (
 				E55C80F92817CAA300082BC9 /* WordGameViewController.swift in Sources */,
 				E55C80FD28187A6F00082BC9 /* WordGameViewModel.swift in Sources */,
+				E5371956282C003600F71E30 /* WordGame.swift in Sources */,
 				E56D3C60281A56480023B467 /* WordsRepository.swift in Sources */,
 				E56D3C5E281A563C0023B467 /* FileReader.swift in Sources */,
 				E56D3C68281A579B0023B467 /* Word.swift in Sources */,
@@ -308,16 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E56ADBB02817220C008DD37B /* BabbelCodingChallengeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E56ADBB12817220C008DD37B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E56ADBBC2817220C008DD37B /* BabbelCodingChallengeUITestsLaunchTests.swift in Sources */,
-				E56ADBBA2817220C008DD37B /* BabbelCodingChallengeUITests.swift in Sources */,
+				E537195B282C14E100F71E30 /* WordGameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,11 +263,6 @@
 			isa = PBXTargetDependency;
 			target = E56ADB942817220C008DD37B /* BabbelCodingChallenge */;
 			targetProxy = E56ADBAC2817220C008DD37B /* PBXContainerItemProxy */;
-		};
-		E56ADBB72817220C008DD37B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E56ADB942817220C008DD37B /* BabbelCodingChallenge */;
-			targetProxy = E56ADBB62817220C008DD37B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -568,52 +498,6 @@
 			};
 			name = Release;
 		};
-		E56ADBC62817220C008DD37B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LL2KGA689L;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ganguly.BabbelCodingChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BabbelCodingChallenge;
-			};
-			name = Debug;
-		};
-		E56ADBC72817220C008DD37B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LL2KGA689L;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ganguly.BabbelCodingChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BabbelCodingChallenge;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -640,15 +524,6 @@
 			buildConfigurations = (
 				E56ADBC32817220C008DD37B /* Debug */,
 				E56ADBC42817220C008DD37B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E56ADBC52817220C008DD37B /* Build configuration list for PBXNativeTarget "BabbelCodingChallengeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E56ADBC62817220C008DD37B /* Debug */,
-				E56ADBC72817220C008DD37B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
