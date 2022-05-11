@@ -28,7 +28,7 @@ class WordGame: WordGameType {
     
     var shownWordsCount = 0
     var isGameOver: Bool {
-        shownWordsCount >= gameLength
+        shownWordsCount > gameLength
     }
     var currentEnglishWord = ""
     var currentSpanishWord = ""
