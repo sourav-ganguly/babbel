@@ -20,7 +20,7 @@ protocol WordGameViewModelType {
 
 class WordGameViewModel: WordGameViewModelType {
     let wordsRepository: WordsRepository
-    var wordGame: WordGame
+    var wordGame: WordGameType
     
     @Published var score: Int = 0
     var scorePublisher: Published<Int>.Publisher { $score }
@@ -36,9 +36,9 @@ class WordGameViewModel: WordGameViewModelType {
     
     private var gameTimer: Timer?
     
-    init(wordsRepository: WordsRepository) {
+    init(wordsRepository: WordsRepository, wordGame: WordGameType) {
         self.wordsRepository = wordsRepository
-        self.wordGame = WordGame()
+        self.wordGame = wordGame
         
         wordsRepository.getWords { [weak self] result in
             guard let self = self else { return }

@@ -22,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             preconditionFailure("Unable to instantiate a WordGameViewController with the name")
         }
         let wordsRepository = WordsRepositoryImpl()
-        let wordGameViewModel = WordGameViewModel(wordsRepository: wordsRepository)
+        let wordGame = WordGame()
+        let wordGameViewModel = WordGameViewModel(wordsRepository: wordsRepository, wordGame: wordGame)
         wordGameViewController.viewModel = wordGameViewModel
         
         self.window?.rootViewController = wordGameViewController

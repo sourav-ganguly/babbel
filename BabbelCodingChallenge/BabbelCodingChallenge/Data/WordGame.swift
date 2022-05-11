@@ -7,7 +7,21 @@
 
 import Foundation
 
-class WordGame {
+protocol WordGameType {
+    var gameLength: Int! { get set }
+    var words: [Word]! { get set }
+    var shownWordsCount: Int { get }
+    var isGameOver: Bool { get }
+    var currentEnglishWord: String { get }
+    var currentSpanishWord: String { get }
+    var score: Int { get }
+    
+    func nextMove()
+    func selectTranslation(status: Bool)
+    func reset()
+}
+
+class WordGame: WordGameType {
     var gameLength: Int!
     var words: [Word]!
     
